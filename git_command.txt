@@ -1,0 +1,9 @@
+#some usful git command 
+git checkout . #recover all local changes to original state, except the
+committed
+git stash #save all uncommitted changes to stash. can be recoverd by git stash
+pop
+git reset --hard commit-id #back to a point, without saving current changes
+git reset --soft commit-id #back to a point, saving current changes
+git reset --hard HEAD~3    #delete recent 3 commits
+
