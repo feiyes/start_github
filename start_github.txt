@@ -1,0 +1,28 @@
+#1.gerrit key and corrlate it to your account
+1.generate key in ~/.ssh/id_rsa, just using default configuration and type
+enter
+  $ssh-keygen -t rsa -b 4096
+2.add public keys into your gerrit account
+  $cat ~/.ssh/id_rsa.pub
+3.set public key to github, just copy generated key to SSH keys in your gerrit account.
+
+#2.install git and gerrit config
+1. install git
+  $sudo yum install git -y
+2.set git user and editor
+  $git config --global user.email "xxx@yyy.com"
+  $git config --global user.name "name"
+  $git config --global core.editor vim
+
+#3.clone remote repository
+1.create a repository and git clone to local
+  $git clone https://github.com/feiyes/start_github.git 
+2.add and edit your files then commit them
+  $git add .
+  $git commit
+  $git push
+3.you may have some troubles when commit your code with http 403, just
+modify .git/config.
+  $vim .git/config
+  [remote "origin"]  
+    url = https://feiyes@github.com/feiyes/example.git
